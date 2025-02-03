@@ -568,7 +568,8 @@ section.home-section-two .d-flex {
   align-items: center;
 }
 
-section.home-section-two .inner h5, section.home-section-two .inner p {
+section.home-section-two .inner h5,
+section.home-section-two .inner p {
   color: #ecda93 !important;
 }
 
@@ -2609,7 +2610,6 @@ ul.brown li:last-child {
   border: unset;
 }
 
-
 ul.golden li:last-child {
   border: unset;
 }
@@ -2644,7 +2644,7 @@ section.property-section-two .text {
 
 .additional-text li {
   color: #fff;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: clamp(14px, 4vw, 16px);
 }
@@ -2767,31 +2767,33 @@ section.home-section-two .black-bg h5 a {
   border: 1px solid #000;
   border-radius: 4px;
   margin-right: 10px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 400;
   font-size: 14px;
 }
 
 .chat-window .sent {
-    text-align: end;
-    background-color: #00000052;
+  text-align: end;
+  background-color: #00000052;
 }
 
 .chat-window .message {
-    color: #fff;
-    font-family: 'Poppins';
-    font-weight: 300;
-    font-size: 14px;
-    padding: 8px;
-    border-radius: 4px;
-    margin: 20px 0;
+  color: #fff;
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 20px 0;
 }
 
 .chat-window .received {
-    background-color: #ffffff1c;
+  background-color: #ffffff1c;
 }
 
-.chat-area input::placeholder {color: #b7b7b7;}
+.chat-area input::placeholder {
+  color: #b7b7b7;
+}
 
 .chat-area button {
   padding: 10px 20px;
@@ -2800,7 +2802,7 @@ section.home-section-two .black-bg h5 a {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-size: 15px;
 }
 
@@ -2809,22 +2811,22 @@ section.home-section-two .black-bg h5 a {
 }
 
 .chat-window .sent {
-    text-align: end;
-    background-color: #00000052;
+  text-align: end;
+  background-color: #00000052;
 }
 
 .chat-window .message {
-    color: #fff;
-    font-family: 'Poppins';
-    font-weight: 300;
-    font-size: 14px;
-    padding: 8px;
-    border-radius: 4px;
-    margin: 20px 0;
+  color: #fff;
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 4px;
+  margin: 20px 0;
 }
 
 .chat-window .received {
-    background-color: #ffffff1c;
+  background-color: #ffffff1c;
 }
 
 .footerr.copy-right {
@@ -2849,3 +2851,74 @@ section.home-section-two .black-bg h5 a {
   font-size: clamp(14px, 4vw, 15px);
   line-height: clamp(26px, 4vw, 26px);
 }
+
+.donut-chart {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+    transform: rotate(-172deg);
+  position: relative;
+  margin: 24px auto;
+}
+
+
+.donut-chart::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: #434343;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.donut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.percentages, .percentagess, .percentagesss {
+  position: relative;
+}
+
+.percentages span {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  width: 48px;
+  justify-content: center;
+  height: 48px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 15px;
+  z-index: 9;
+}
+
+span.forty {
+  top: 0;
+  bottom: 0;
+  left: 16px;
+  margin: auto;
+}
+
+span.thirteen {
+  right: 80px;
+  bottom: -20px;
+}
+
+span.seventeen {
+  right: 40px;
+  top: 20px;
+}
+
