@@ -2,8 +2,8 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Header from "../../../components/header";
-import Footer from "../../../components/Footer";
+import Header from "../components/header";
+import Footer from "../components/Footer";
 import React, { useRef } from "react";
 import Slider from "react-slick";
 
@@ -162,7 +162,7 @@ export default function ContactUs() {
                   professional Office available. Space can be customized to fit
                   your business needs.
                 </p>
-                <div class="features-grid">
+                <div className="features-grid">
                   <ul>
                     <li>Food Service</li>
                     <li>Property Manager on Site</li>
@@ -188,7 +188,7 @@ export default function ContactUs() {
 
               <div className="mt-5">
                 <h5 className="sub-text mb-3">Property Facts:</h5>
-                <div class="building-details">
+                <div className="building-details">
                   <ul>
                     <li className="d-flex">
                       <p>Building Type:</p>

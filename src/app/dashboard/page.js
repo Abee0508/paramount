@@ -2,8 +2,8 @@ import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Header from "../../../components/header";
-import Footer from "../../../components/Footer";
+import Header from "../components/header";
+import Footer from "../components/Footer";
 
 export default function Dashboard() {
   const [showModal, setShowModal] = useState(false);
@@ -219,217 +219,217 @@ export default function Dashboard() {
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="pending">Pending</td>
+                                  <td className="pending">Pending</td>
                                   <td>SR0021P</td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td class="resolved">Resolved</td>
+                                  <td className="resolved">Resolved</td>
                                   <td>PQ1132G</td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="pending">Pending</td>
+                                  <td className="pending">Pending</td>
                                   <td>SR0021P</td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td class="resolved">Resolved</td>
+                                  <td className="resolved">Resolved</td>
                                   <td>PQ1132G</td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="pending">Pending</td>
+                                  <td className="pending">Pending</td>
                                   <td>SR0021P</td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td class="resolved">Resolved</td>
+                                  <td className="resolved">Resolved</td>
                                   <td>PQ1132G</td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="inprogress">Inprogress</td>
+                                  <td className="inprogress">Inprogress</td>
                                   <td>SR0021P</td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td class="resolved">Resolved</td>
+                                  <td className="resolved">Resolved</td>
                                   <td>PQ1132G</td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="inprogress">Inprogress</td>
+                                  <td className="inprogress">Inprogress</td>
                                   <td>SR0021P</td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="inprogress">Inprogress</td>
+                                  <td className="inprogress">Inprogress</td>
                                   <td>SR0021P</td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td class="resolved">Resolved</td>
+                                  <td className="resolved">Resolved</td>
                                   <td>PQ1132G</td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td class="resolved">Resolved</td>
+                                  <td className="resolved">Resolved</td>
                                   <td>PQ1132G</td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td class="resolved">Resolved</td>
+                                  <td className="resolved">Resolved</td>
                                   <td>PQ1132G</td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td class="resolved">Resolved</td>
+                                  <td className="resolved">Resolved</td>
                                   <td>PQ1132G</td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td class="resolved">Resolved</td>
+                                  <td className="resolved">Resolved</td>
                                   <td>PQ1132G</td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td class="resolved">Resolved</td>
+                                  <td className="resolved">Resolved</td>
                                   <td>PQ1132G</td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td class="resolved">Resolved</td>
+                                  <td className="resolved">Resolved</td>
                                   <td>PQ1132G</td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td class="resolved">Resolved</td>
+                                  <td className="resolved">Resolved</td>
                                   <td>PQ1132G</td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td class="resolved">Resolved</td>
+                                  <td className="resolved">Resolved</td>
                                   <td>PQ1132G</td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td class="resolved">Resolved</td>
+                                  <td className="resolved">Resolved</td>
                                   <td>PQ1132G</td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="inprogress">Inprogress</td>
+                                  <td className="inprogress">Inprogress</td>
                                   <td>SR0021P</td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="inprogress">Inprogress</td>
+                                  <td className="inprogress">Inprogress</td>
                                   <td>SR0021P</td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="inprogress">Inprogress</td>
+                                  <td className="inprogress">Inprogress</td>
                                   <td>SR0021P</td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="inprogress">Inprogress</td>
+                                  <td className="inprogress">Inprogress</td>
                                   <td>SR0021P</td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="inprogress">Inprogress</td>
+                                  <td className="inprogress">Inprogress</td>
                                   <td>SR0021P</td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="inprogress">Inprogress</td>
+                                  <td className="inprogress">Inprogress</td>
                                   <td>SR0021P</td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="inprogress">Inprogress</td>
+                                  <td className="inprogress">Inprogress</td>
                                   <td>SR0021P</td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="inprogress">Inprogress</td>
+                                  <td className="inprogress">Inprogress</td>
                                   <td>SR0021P</td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="inprogress">Inprogress</td>
+                                  <td className="inprogress">Inprogress</td>
                                   <td>SR0021P</td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="inprogress">Inprogress</td>
+                                  <td className="inprogress">Inprogress</td>
                                   <td>SR0021P</td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td class="inprogress">Inprogress</td>
+                                  <td className="inprogress">Inprogress</td>
                                   <td>SR0021P</td>
                                 </tr>
                               </tbody>
