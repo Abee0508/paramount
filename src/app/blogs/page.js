@@ -53,13 +53,11 @@ export default function Blogs() {
                   </div>
 
                   <div className="text">
-                    <h5 className="sub-text">Lorem Ipsum is simply dummy</h5>
+                    <h5 className="sub-text">Creating an Inspiring Office Workspace to Boost Your Team’s Productivity and Business Growth</h5>
                     <p data-aos="fade-up" className="paragraph">
-                      It is a long established fact that a reader will be
-                      distracted by the readable content of a page when looking
-                      at its layout.
+                    Ever walked into an <span>office space</span> and immediately felt energized? There's something about a well-thought-out workspace that just clicks, right? Whether it’s the splash of color on the walls or the clever layout that invites creativity, the environment you create for your team can play a huge role in everyday productivity and overall business growth.
                     </p>
-                    <Link href="">
+                    <Link href="/blog-detail-one">
                       READ MORE<i className="fa-solid fa-angle-right"></i>
                     </Link>
                   </div>
@@ -76,13 +74,11 @@ export default function Blogs() {
                   </div>
 
                   <div className="text">
-                    <h5 className="sub-text">Lorem Ipsum is simply dummy</h5>
+                    <h5 className="sub-text">5 Key Questions to Consider When Leasing Commercial Office Space</h5>
                     <p data-aos="fade-up" className="paragraph">
-                      It is a long established fact that a reader will be
-                      distracted by the readable content of a page when looking
-                      at its layout.
+                    Leasing commercial office space is a crucial step for any business. The decision directly impacts daily operations, employee productivity, and long-term financial stability. A well-chosen space enhances collaboration, impresses clients, and provides room for future growth. On the other hand, a poorly selected space can result in financial burdens, logistical issues, and inefficiencies.
                     </p>
-                    <Link href="">
+                    <Link href="/blog-detail-two">
                       READ MORE<i className="fa-solid fa-angle-right"></i>
                     </Link>
                   </div>
@@ -99,13 +95,11 @@ export default function Blogs() {
                   </div>
 
                   <div className="text">
-                    <h5 className="sub-text">Lorem Ipsum is simply dummy</h5>
+                    <h5 className="sub-text">Why Leasing Office Space is Still a Smart Move in a Hybrid/Remote Work Era</h5>
                     <p data-aos="fade-up" className="paragraph">
-                      It is a long established fact that a reader will be
-                      distracted by the readable content of a page when looking
-                      at its layout.
+                    The rise of hybrid and remote work models has transformed how businesses operate. With more employees working from home, many companies are reconsidering the need for physical office space. While remote work offers flexibility, it also presents challenges related to collaboration, professionalism, and productivity. Despite these shifts, leasing office space in the hybrid work era remains a strategic move for businesses looking to balance flexibility with operational efficiency.
                     </p>
-                    <Link href="">
+                    <Link href="/blog-detail-three">
                       READ MORE<i className="fa-solid fa-angle-right"></i>
                     </Link>
                   </div>
