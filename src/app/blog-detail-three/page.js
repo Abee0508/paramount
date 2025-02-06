@@ -274,7 +274,7 @@ export default function BlogDetailThree() {
             </div>
           </div>
         </section>
-
+       
         <section className="home home-section-seven">
           <div className="container">
             <div className="title text-center">

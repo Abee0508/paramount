@@ -1,9 +1,9 @@
-import Head from "next/head";
-import React, { useState, useEffect } from "react";
+"use client";
 import Link from "next/link";
-import Image from "next/image";
-import Header from "../components/header";
-import Footer from "../components/Footer";
+import Head from "next/head";
+import { Doughnut } from "react-chartjs-2";
+import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
+import React, { useState, useEffect } from "react";
 
 export default function Dashboard() {
   const [showModal, setShowModal] = useState(false);
@@ -11,27 +11,46 @@ export default function Dashboard() {
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
 
-  // DONUT CHART
+  Chart.register(ArcElement, Tooltip, Legend);
 
-  // **Define values and colors**
-  const [values, setValues] = useState([30, 40, 20]);
-  const [colors, setColors] = useState(["#2CA215", "#E5D28C", "#FC4054"]);
-  const [gradient, setGradient] = useState("");
+  const data = {
+    labels: ["Resolve", "Inprogress", "Pending"],
+    datasets: [
+      {
+        label: "My First Dataset",
+        data: [300, 50, 100],
+        backgroundColor: ["#2B9D14", "#E4D18C", "#F83F53"],
+        hoverOffset: 4,
+        offset: 0,
+        rotation: 0,
+        borderDashOffset: 0.8,
+        weight: 4,
+        borderWidth: 0,
+        borderAlign: "inner",
+        borderJoinStyle: "round",
+        borderRadius: 0,
+      },
+    ],
+  };
 
-  useEffect(() => {
-    if (values.length !== colors.length) return;
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: "bottom",
+        labels: {
+          usePointStyle: true,
+          pointStyle: "circle", 
+          color: "white",
+          font: {
+            size: 12,
+          },
+        },
+      },
+    },
+  };
 
-    let total = values.reduce((a, b) => a + b, 0);
-    let currentPercentage = 0;
-
-    let gradientParts = values.map((value, index) => {
-      let start = currentPercentage;
-      let end = (currentPercentage += (value / total) * 100);
-      return `${colors[index]} ${start}% ${end}%`;
-    });
-
-    setGradient(`conic-gradient(${gradientParts.join(", ")})`);
-  }, [values, colors]);
   return (
     <>
       <Head>
@@ -440,24 +459,12 @@ export default function Dashboard() {
                     </div>
                     <div className="col-md-4">
                       <div className="circular-chartt">
-                        <div className="top d-flex justify-content-between align-items-center">
+                        <div class="top d-flex justify-content-between align-items-center">
                           <h5>Ticket Status</h5>
                           <h6>View Details</h6>
                         </div>
-                        <div className="percentages">
-                          <span className="seventeen values">{values[0]}%</span>
-                          <div className="percentagess">
-                            <span className="forty values">{values[1]}%</span>
-                            <div className="percentagesss">
-                              <span className="thirteen values">
-                                {values[2]}%
-                              </span>
-                              <div
-                                className="donut-chart"
-                                style={{ background: gradient }}
-                              ></div>
-                            </div>
-                          </div>
+                        <div style={{ width: "300px", height: "300px" }}>
+                          <Doughnut data={data} options={options} />
                         </div>
                       </div>
 
