@@ -6,6 +6,7 @@ import axiosInstance from "@/utils/axios";
 import axios from 'axios';
 import { redirect } from 'next/navigation'
 import { sendGetRequest } from "./auth/api/helper";
+import toast from "react-hot-toast";
 
 export async function logout(prevState){
     deleteSession('session')
@@ -19,6 +20,7 @@ export async function login(prevState, formData){
     const res = await axios.post(process.env.NEXT_PUBLIC_API_URL+'/api/login',{
         email: email,
         password: password,
+        
     }).catch(e=>{
         return e.response.data
     })
@@ -27,7 +29,9 @@ export async function login(prevState, formData){
     }else{
         await createSession(res.data.user.id)
         await createSession(res.data.token, "token")
-        redirect('/')
+        
+
+        redirect('/dashboard')
     }
     // }catch(ex){
     //     console.log(ex)

@@ -1,9 +1,13 @@
+"use client";
 import Head from "next/head";
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "../components/header";
 import Footer from "../components/Footer";
+import Sidebar from "../components/Sidebar";
+import Dashboard from "../dashboard/page";
+import DashboardHeader from "../components/DashboardHeader";
 
 export default function SubmitTicket() {
   const [showModal, setShowModal] = useState(false);
@@ -26,85 +30,15 @@ export default function SubmitTicket() {
                 <div className="top-logo">
                   <img src="/images/dashboard-logo.png" />
                 </div>
-                <div className="dashboard-buttons">
-                  <ul>
-                    <li>
-                      <Link href="/dashboard">
-                        <button className id="dashboard">
-                          <img src="/images/dash-icon.png" />
-                          Dashboard
-                        </button>
-                      </Link>
-                    </li>
-
-                    <li>
-                      <button id="tickets">
-                        <img src="/images/profile-icon.png" />
-                        My Tickets
-                      </button>
-                    </li>
-
-                    <li>
-                      <Link href="/messages">
-                        <button className="active" id="messages">
-                          <img src="/images/msg-icon.png" />
-                          Messages
-                        </button>
-                      </Link>
-                    </li>
-
-                    <li>
-                      <button id="setting">
-                        <img src="/images/setting-icon.png" />
-                        Setting
-                      </button>
-                    </li>
-
-                    <li>
-                      <Link href="/login">
-                        <button id="logout">
-                          <img src="/images/logout-icon.png" />
-                          Log Out
-                        </button>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
+                <Sidebar />
+               
                 <div className="faded-logo">
                   <img src="/images/dashboard-faded-logo.png" />
                 </div>
               </div>
 
               <div className="center-part">
-                <div className="top d-flex justify-content-between align-items-center mb-5">
-                  <div className="session-heading">
-                    <h1>Dashboard</h1>
-                  </div>
-
-                  <div className="search">
-                    <span>
-                      {" "}
-                      <i className="fa-solid fa-magnifying-glass"></i>
-                    </span>
-                    <input type="text" placeholder="Search something..." />
-                  </div>
-
-                  <div className="user d-flex align-items-center">
-                    <div className="noti">
-                      <button onClick={handleOpenModal}>
-                        <img src="/images/notification-icon.png" />
-                      </button>
-                    </div>
-                    <div className="text-end">
-                      <h5>Your Name</h5>
-                      <h6>User</h6>
-                    </div>
-                    <div className="user-logo">
-                      <img src="/images/user-logo.png" />
-                    </div>
-                  </div>
-                </div>
-
+                <DashboardHeader />
                 <div className="middle d-flex justify-content-between">
                   <div className="tkt-status">
                     <h4>Submit Ticket</h4>
@@ -122,8 +56,8 @@ export default function SubmitTicket() {
                     </div>
 
                     <div className="middle">
-                      <select>
-                        <option selected>Select Issue Type</option>
+                      <select defaultValue="Select Issue Type">
+                        <option disabled>Select Issue Type</option>
                         <option>Issue</option>
                         <option>Issue</option>
                         <option>Issue</option>

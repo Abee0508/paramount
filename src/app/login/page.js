@@ -5,8 +5,17 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "../components/header";
 import Footer from "../components/Footer";
+import { login } from "@/app/actions";
+import { useFormState } from 'react-dom'
+import toast from "react-hot-toast";
+import { useActionState } from "react";
+
+const initialState = {
+    errors: [],
+}
 
 export default function Login() {
+  const [state, formAction] = useActionState(login, initialState)
   return (
     <>
       <Head>
@@ -32,16 +41,16 @@ export default function Login() {
                     <div className="col-md-6">
                       <div className="login-right">
                         <img src="/images/login-img.png" />
-                        <form>
-                          <input type="email" placeholder="Email" />
-                          <input type="pasword" placeholder="Password" />
+                        <form action={formAction}>
+                          <input type="email" name="email" placeholder="Email" />
+                          <input type="password" name="password" placeholder="Password" />
                           <div className="text-end">
                             <Link href="">Forgot your Password?</Link>
                           </div>
                           <div className="grad-bg">
-                            <Link className="bgg" href="/dashboard">
+                            <button className="bgg" type="submit">
                               Login
-                            </Link>
+                            </button>
                           </div>
                         </form>
                         <div className="text-center">
