@@ -5,51 +5,13 @@ import { Doughnut } from "react-chartjs-2";
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
 import React, { useState, useEffect } from "react";
 
-export default function Dashboard() {
+export default function Tickets() {
   const [showModal, setShowModal] = useState(false);
 
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
 
-  Chart.register(ArcElement, Tooltip, Legend);
 
-  const data = {
-    labels: ["Resolve", "Inprogress", "Pending"],
-    datasets: [
-      {
-        label: "My First Dataset",
-        data: [300, 50, 100],
-        backgroundColor: ["#2B9D14", "#E4D18C", "#F83F53"],
-        hoverOffset: 4,
-        offset: 0,
-        rotation: 0,
-        borderDashOffset: 0.8,
-        weight: 4,
-        borderWidth: 0,
-        borderAlign: "inner",
-        borderJoinStyle: "round",
-        borderRadius: 0,
-      },
-    ],
-  };
-
-  const options = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        position: "bottom",
-        labels: {
-          usePointStyle: true,
-          pointStyle: "circle", 
-          color: "white",
-          font: {
-            size: 12,
-          },
-        },
-      },
-    },
-  };
 
   return (
     <>
@@ -60,25 +22,27 @@ export default function Dashboard() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="scroll-content">
-        <section className="dashboard-main">
+        <section className="dashboard-main ticketss">
           <div className="container-fluid">
             <div className="dashboard-content d-flex">
-              <div className="left-bar">
+            <div className="left-bar">
                 <div className="top-logo">
                   <img src="/images/dashboard-logo.png" />
                 </div>
                 <div className="dashboard-buttons">
                   <ul>
                     <li>
-                      <button className="active" id="dashboard">
+                    <Link href="/dashboard">
+                      <button id="dashboard">
                         <img src="/images/dash-icon.png" />
                         Dashboard
                       </button>
+                      </Link>
                     </li>
 
                     <li>
-                      <Link href="/tickets">
-                        <button id="tickets">
+                      <Link href="/messages">
+                        <button id="messages">
                           <img src="/images/profile-icon.png" />
                           Messages
                         </button>
@@ -87,7 +51,7 @@ export default function Dashboard() {
 
                     <li>
                       <Link href="/tickets-detail">
-                        <button id="tickets-detail">
+                        <button  id="tickets-detail">
                           <img src="/images/msg-icon.png" />
                           My Tickets
                         </button>
@@ -119,7 +83,7 @@ export default function Dashboard() {
               <div className="center-part">
                 <div className="top d-flex justify-content-between align-items-center mb-5">
                   <div className="session-heading">
-                    <h1>Dashboard</h1>
+                    <h1>Tickets Detail</h1>
                   </div>
 
                   <div className="search">
@@ -146,72 +110,10 @@ export default function Dashboard() {
                   </div>
                 </div>
 
-                <div className="middle d-flex justify-content-between">
-                  <div className="d-flex  justify-content-between">
-                    <div className="tkt-status">
-                      <h4>Ticket Statuses</h4>
-                    </div>
-                    <div className="filter-submit-tkt">
-                      {/* <select>
-                        <option selected>Filter</option>
-                        <option>Filter1</option>
-                        <option>Filter2</option>
-                        <option>Filter3</option>
-                      </select> */}
-                      <Link className="dflt-button" href="/submit-ticket">
-                        SUBMIT TICKET
-                      </Link>
-                    </div>
-                  </div>
-
-                  <div>
-                    <div className="tkt-progress-box d-flex flex-wrap justify-content-between">
-                      <button className="box d-flex align-items-center  justify-content-between">
-                        <div>
-                          <img src="/images/tkt-submission.png" />
-                        </div>
-                        <div>
-                          <h5>025</h5>
-                          <p>Ticket Submissions</p>
-                        </div>
-                      </button>
-
-                      <button className="box d-flex align-items-center  justify-content-between">
-                        <div>
-                          <img src="/images/pending-tkt.png" />
-                        </div>
-                        <div>
-                          <h5>007</h5>
-                          <p>Pending Tickets</p>
-                        </div>
-                      </button>
-
-                      <button className="box d-flex align-items-center  justify-content-between">
-                        <div>
-                          <img src="/images/inprogress-tkt.png" />
-                        </div>
-                        <div>
-                          <h5>012</h5>
-                          <p>Inprogress Tickets</p>
-                        </div>
-                      </button>
-
-                      <button className="box d-flex align-items-center  justify-content-between">
-                        <div>
-                          <img src="/images/resolve-tkt.png" />
-                        </div>
-                        <div>
-                          <h5>006</h5>
-                          <p>Resolved Tickets</p>
-                        </div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
 
                 <div className="ticket-main">
                   <div className="row">
-                    <div className="col-md-8">
+                    <div className="col-md-12">
                       <div className="ticket-table">
                         <div className="heightt">
                           <div className="top d-flex justify-content-between align-items-center">
@@ -231,8 +133,7 @@ export default function Dashboard() {
                                   <th>Ticket ID</th>
                                   <th>Reason</th>
                                   <th>Date</th>
-                                  <th>Status</th>
-                                  <th>Tracking</th>
+                                  <th>View</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -240,301 +141,191 @@ export default function Dashboard() {
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="pending">Pending</td>
-                                  <td>SR0021P</td>
+                                  <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td className="resolved">Resolved</td>
-                                  <td>PQ1132G</td>
+                                  <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="pending">Pending</td>
-                                  <td>SR0021P</td>
+                                  <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td className="resolved">Resolved</td>
-                                  <td>PQ1132G</td>
+                                  <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="pending">Pending</td>
-                                  <td>SR0021P</td>
+                                  <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td className="resolved">Resolved</td>
-                                  <td>PQ1132G</td>
+                                  <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="inprogress">Inprogress</td>
-                                  <td>SR0021P</td>
+                                  <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td className="resolved">Resolved</td>
-                                  <td>PQ1132G</td>
+                                  <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="inprogress">Inprogress</td>
-                                  <td>SR0021P</td>
+                                  <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="inprogress">Inprogress</td>
-                                  <td>SR0021P</td>
+                                  <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td className="resolved">Resolved</td>
-                                  <td>PQ1132G</td>
+                                  <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td className="resolved">Resolved</td>
-                                  <td>PQ1132G</td>
+                                  <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td className="resolved">Resolved</td>
-                                  <td>PQ1132G</td>
+                                  <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td className="resolved">Resolved</td>
-                                  <td>PQ1132G</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td className="resolved">Resolved</td>
-                                  <td>PQ1132G</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td className="resolved">Resolved</td>
-                                  <td>PQ1132G</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td className="resolved">Resolved</td>
-                                  <td>PQ1132G</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td className="resolved">Resolved</td>
-                                  <td>PQ1132G</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td className="resolved">Resolved</td>
-                                  <td>PQ1132G</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#051134</td>
                                   <td>Dolor Sit</td>
                                   <td>03 Jan 2023</td>
-                                  <td className="resolved">Resolved</td>
-                                  <td>PQ1132G</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="inprogress">Inprogress</td>
-                                  <td>SR0021P</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="inprogress">Inprogress</td>
-                                  <td>SR0021P</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="inprogress">Inprogress</td>
-                                  <td>SR0021P</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="inprogress">Inprogress</td>
-                                  <td>SR0021P</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="inprogress">Inprogress</td>
-                                  <td>SR0021P</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="inprogress">Inprogress</td>
-                                  <td>SR0021P</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="inprogress">Inprogress</td>
-                                  <td>SR0021P</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="inprogress">Inprogress</td>
-                                  <td>SR0021P</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="inprogress">Inprogress</td>
-                                  <td>SR0021P</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="inprogress">Inprogress</td>
-                                  <td>SR0021P</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                                 <tr>
                                   <td>#00052</td>
                                   <td>Lorem Ipsum</td>
                                   <td>01 Jan 2023</td>
-                                  <td className="inprogress">Inprogress</td>
-                                  <td>SR0021P</td>
+                                <td className="text-start"><Link href="/messages">View Messages <sup>01</sup></Link> </td>
                                 </tr>
                               </tbody>
                             </table>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-4">
-                      <div className="circular-chartt">
-                        <div class="top d-flex justify-content-between align-items-center mb-4">
-                          <h5>Ticket Status</h5>
-                          <h6>View Details</h6>
-                        </div>
-                        <div style={{ width: "300px", height: "300px" }}>
-                          <Doughnut data={data} options={options} />
-                        </div>
-                      </div>
-
-                      <div className="paid-rent">
-                        <div className="top d-flex justify-content-between align-items-center">
-                          <h5>Paid Rent</h5>
-                          <h6>View Details</h6>
-                        </div>
-                        <div className="paid-rent-conatiner">
-                          <ul>
-                            <li>
-                              <div>
-                                <strong>Date</strong>
-                              </div>
-                            </li>
-
-                            <li>
-                              <div>
-                                <p>01 Dec 2024</p>
-                              </div>
-                            </li>
-
-                            <li>
-                              <div>
-                                <p>03 Nov 2024</p>
-                              </div>
-                            </li>
-                          </ul>
-
-                          <ul>
-                            <li>
-                              <div>
-                                <strong>Name</strong>
-                              </div>
-                            </li>
-
-                            <li>
-                              <div>
-                                <p>Robert</p>
-                              </div>
-                            </li>
-
-                            <li>
-                              <div>
-                                <p>Robert</p>
-                              </div>
-                            </li>
-                          </ul>
-
-                          <ul>
-                            <li>
-                              <div>
-                                <strong>Amount</strong>
-                              </div>
-                            </li>
-
-                            <li>
-                              <div>
-                                <p>$150.82</p>
-                              </div>
-                            </li>
-
-                            <li>
-                              <div>
-                                <p>$150.82</p>
-                              </div>
-                            </li>
-                          </ul>
                         </div>
                       </div>
                     </div>

@@ -1,3 +1,4 @@
+"use client";
 import Head from "next/head";
 import React, { useState } from "react";
 import Link from "next/link";
@@ -38,17 +39,19 @@ export default function SubmitTicket() {
                     </li>
 
                     <li>
-                      <button id="tickets">
-                        <img src="/images/profile-icon.png" />
-                        My Tickets
-                      </button>
+                      <Link href="/tickets">
+                        <button id="tickets">
+                          <img src="/images/profile-icon.png" />
+                          Messages
+                        </button>
+                      </Link>
                     </li>
 
                     <li>
-                      <Link href="/messages">
-                        <button className="active" id="messages">
+                      <Link href="/tickets-detail">
+                        <button id="tickets-detail">
                           <img src="/images/msg-icon.png" />
-                          Messages
+                          My Tickets
                         </button>
                       </Link>
                     </li>

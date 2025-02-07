@@ -1,3 +1,4 @@
+"use client";
 import Head from "next/head";
 import React, { useState } from "react";
 import Link from "next/link";
@@ -54,17 +55,19 @@ export default function Messages() {
                     </li>
 
                     <li>
-                      <button id="tickets">
-                        <img src="/images/profile-icon.png" />
-                        My Tickets
-                      </button>
+                      <Link href="/messages">
+                        <button className="active" id="messages">
+                          <img src="/images/profile-icon.png" />
+                          Messages
+                        </button>
+                      </Link>
                     </li>
 
                     <li>
-                      <Link href="/messages">
-                        <button className="active" id="messages">
+                      <Link href="/tickets-detail">
+                        <button id="tickets-detail">
                           <img src="/images/msg-icon.png" />
-                          Messages
+                          My tickets
                         </button>
                       </Link>
                     </li>

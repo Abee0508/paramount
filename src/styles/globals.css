@@ -1806,14 +1806,21 @@ section.dashboard-main .container-fluid {
   background-color: #ecda93;
 }
 
+.tkt-progress-box .box:hover {
+  box-shadow: rgb(255 255 255 / 35%) 0px 0 15px;
+}
+
 .tkt-progress-box .box {
-  flex: 1 1 calc(24% - 20px); /* Adjusts dynamically */
+  flex-grow: 1;
+  transition: all 0.3s;
+  flex-shrink: 1;
+  flex-basis: calc(24% - 20px);
   min-width: 200px;
   max-width: 300px;
   border: 2px solid #000;
   border-radius: 20px;
   padding: 16px 26px;
-  background: linear-gradient(45deg, #00000012, #ffffff12);
+  background: linear-gradient(45deg, #00000012, #ffffff1f);
 }
 
 .tkt-progress-box .box img {
@@ -1914,7 +1921,7 @@ section.dashboard-main .container-fluid {
   font-family: "Poppins";
   font-weight: 400;
   font-size: 14px;
-  width: 25%;
+  min-width: 170px;
   padding: 0 0 18px;
 }
 
@@ -1926,7 +1933,7 @@ section.dashboard-main .container-fluid {
   padding-bottom: 0;
 }
 
-.tablee tbody tr td:last-child {
+.tablee tbody tr td:nth-child(5) {
   color: #ffffff78;
 }
 
@@ -2936,4 +2943,82 @@ section.blog-detail-section-two p.italic {
   height: 4px;
   border: 1px solid #9d9d9d;
   margin: 0 0 20px;
+}
+
+.tkt-progress-box .box:focus {
+    background-color: #000;
+}
+
+section.dashboard-main.tickets-detail .heightt {
+  height: 801px !important;
+}
+
+section.dashboard-main.tickets-detail {
+  padding: 1%;
+}
+
+
+section.dashboard-main.tickets-detail .search {
+  width: 660px;
+}
+
+section.dashboard-main.tickets-detail .ticket-table {
+  border: unset;
+}
+
+.tablee tbody td a {
+  display: block;
+  text-decoration: unset;
+  color: #fff;
+  display: flex;
+}
+
+.tablee tbody tr td:nth-child(6) {
+  min-width: 110px;
+}
+
+.ticket-sidebar ul {
+  margin: 0;
+  padding: 0;
+}
+
+.ticket-sidebar li {
+  align-items: center;
+  color: #fff;
+  list-style: none;
+  border-radius: 16px;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0 0 13px;
+}
+
+.ticket-sidebar h5 {
+  color: #ecda93;
+  font-weight: 500;
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  font-family: "Poppins";
+  margin: 0 0 2rem;
+}
+
+.ticket-sidebar {
+  background: linear-gradient(45deg, #0000001c, #ffffff1f);
+  border-radius: 20px;
+  height: 100%;
+  padding: 20px;
+}
+
+.tablee tbody td a sup {
+  display: flex;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: red;
+  justify-content: center;
+  left: 5px;
+  font-size: 8px;
+  top: -10px;
 }
