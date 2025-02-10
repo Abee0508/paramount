@@ -5,6 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import Header from "../components/header";
 import Footer from "../components/Footer";
+import Sidebar from "../components/Sidebar";
+import Dashboard from "../dashboard/page";
+import DashboardHeader from "../components/DashboardHeader";
 
 export default function SubmitTicket() {
   const [showModal, setShowModal] = useState(false);
@@ -39,19 +42,17 @@ export default function SubmitTicket() {
                     </li>
 
                     <li>
-                      <Link href="/tickets">
-                        <button id="tickets">
-                          <img src="/images/profile-icon.png" />
-                          Messages
-                        </button>
-                      </Link>
+                      <button id="tickets">
+                        <img src="/images/profile-icon.png" />
+                        My Tickets
+                      </button>
                     </li>
 
                     <li>
-                      <Link href="/tickets-detail">
-                        <button id="tickets-detail">
+                      <Link href="/messages">
+                        <button className="active" id="messages">
                           <img src="/images/msg-icon.png" />
-                          My Tickets
+                          Messages
                         </button>
                       </Link>
                     </li>
@@ -79,35 +80,7 @@ export default function SubmitTicket() {
               </div>
 
               <div className="center-part">
-                <div className="top d-flex justify-content-between align-items-center mb-5">
-                  <div className="session-heading">
-                    <h1>Dashboard</h1>
-                  </div>
-
-                  <div className="search">
-                    <span>
-                      {" "}
-                      <i className="fa-solid fa-magnifying-glass"></i>
-                    </span>
-                    <input type="text" placeholder="Search something..." />
-                  </div>
-
-                  <div className="user d-flex align-items-center">
-                    <div className="noti">
-                      <button onClick={handleOpenModal}>
-                        <img src="/images/notification-icon.png" />
-                      </button>
-                    </div>
-                    <div className="text-end">
-                      <h5>Your Name</h5>
-                      <h6>User</h6>
-                    </div>
-                    <div className="user-logo">
-                      <img src="/images/user-logo.png" />
-                    </div>
-                  </div>
-                </div>
-
+                <DashboardHeader />
                 <div className="middle d-flex justify-content-between">
                   <div className="tkt-status">
                     <h4>Submit Ticket</h4>
@@ -125,8 +98,8 @@ export default function SubmitTicket() {
                     </div>
 
                     <div className="middle">
-                      <select>
-                        <option selected>Select Issue Type</option>
+                      <select defaultValue="Select Issue Type">
+                        <option disabled>Select Issue Type</option>
                         <option>Issue</option>
                         <option>Issue</option>
                         <option>Issue</option>

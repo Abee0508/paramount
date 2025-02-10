@@ -1,11 +1,30 @@
+"use client";
 import Head from "next/head";
 
 import Link from "next/link";
 import Image from "next/image";
 import Header from "../components/header";
 import Footer from "../components/Footer";
+import handleContactUs from "../auth/api/contactUsHelper";
+import { useEffect, useState } from "react";
 
 export default function ContactUs() {
+
+  const [formData, setFormData] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleInputChange = (field, value) => {
+    setFormData({
+      ...formData,
+      [field]: value,
+    });
+  };
+
   return (
     <>
       <Head>
@@ -144,26 +163,50 @@ export default function ContactUs() {
                 <div className="col-md-8">
                   <div className="row">
                     <div className="col-md-6">
-                      <input type="text" placeholder="First Name" />
+                      <input
+                    type="text"
+                    placeholder="First Name *"
+                    value={formData.first_name}
+                    onChange={(e) => handleInputChange("first_name", e.target.value)}
+                  />
                     </div>
 
                     <div className="col-md-6">
-                      <input type="text" placeholder="Last Name" />
+                    <input
+                    type="text"
+                    placeholder="Last Name *"
+                    value={formData.last_name}
+                    onChange={(e) => handleInputChange("last_name", e.target.value)}
+                  />
                     </div>
 
                     <div className="col-md-6">
-                      <input type="text" placeholder="First Name" />
+                    <input
+                    type="email"
+                    placeholder="Email Address *"
+                    value={formData.email}
+                    onChange={(e) => handleInputChange("email", e.target.value)}
+                  />
                     </div>
 
                     <div className="col-md-6">
-                      <input type="text" placeholder="Last Name" />
+                    <input
+                    type="tel"
+                    placeholder="Phone Number *"
+                    value={formData.phone}
+                    onChange={(e) => handleInputChange("phone", e.target.value)}
+                  />
                     </div>
 
                     <div className="col-md-12">
-                      <textarea placeholder="Message"></textarea>
+                    <textarea
+                    placeholder="Message Here..."
+                    value={formData.message}
+                    onChange={(e) => handleInputChange("message", e.target.value)}
+                  ></textarea>
                     </div>
                   </div>
-                  <button>Send Message</button>
+                  <button onClick={() => handleContactUs(formData, setFormData)}>Send Message</button>
                 </div>
               </div>
             </div>

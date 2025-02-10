@@ -1,4 +1,5 @@
 import initialize from "@/utils/baxios";
+import toast from "react-hot-toast";
 
 export async function sendRequest(route, formData, successResponseKey='') {
     const axios = await initialize()
@@ -64,3 +65,7 @@ export function fixStoragePath(imageUrl) {
 
     return imageUrl; // Already starts with /storage/, so return as is
   }
+
+
+  
+  

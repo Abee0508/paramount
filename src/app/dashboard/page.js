@@ -4,9 +4,20 @@ import Head from "next/head";
 import { Doughnut } from "react-chartjs-2";
 import { Chart, ArcElement, Tooltip, Legend } from "chart.js";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import Header from "@/app/components/header";
+import Footer from "@/app/components/header";
+import { logout, me } from "@/app/actions";
+import { useFormState } from 'react-dom'
+import Sidebar from "@/app/components/Sidebar";
+import DashboardHeader from "../components/DashboardHeader";
+const initialState = {
+  message: ''
+}
 
 export default function Dashboard() {
   const [showModal, setShowModal] = useState(false);
+  const [isActive, setIsActive] = useState("true");
 
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
@@ -41,7 +52,7 @@ export default function Dashboard() {
         position: "bottom",
         labels: {
           usePointStyle: true,
-          pointStyle: "circle", 
+          pointStyle: "circle",
           color: "white",
           font: {
             size: 12,
@@ -50,6 +61,12 @@ export default function Dashboard() {
       },
     },
   };
+
+
+
+
+  
+
 
   return (
     <>
@@ -77,19 +94,17 @@ export default function Dashboard() {
                     </li>
 
                     <li>
-                      <Link href="/tickets">
-                        <button id="tickets">
-                          <img src="/images/profile-icon.png" />
-                          Messages
-                        </button>
-                      </Link>
+                      <button id="tickets">
+                        <img src="/images/profile-icon.png" />
+                        My Tickets
+                      </button>
                     </li>
 
                     <li>
-                      <Link href="/tickets-detail">
-                        <button id="tickets-detail">
+                      <Link href="/messages">
+                        <button id="messages">
                           <img src="/images/msg-icon.png" />
-                          My Tickets
+                          Messages
                         </button>
                       </Link>
                     </li>
@@ -117,47 +132,19 @@ export default function Dashboard() {
               </div>
 
               <div className="center-part">
-                <div className="top d-flex justify-content-between align-items-center mb-5">
-                  <div className="session-heading">
-                    <h1>Dashboard</h1>
-                  </div>
-
-                  <div className="search">
-                    <span>
-                      {" "}
-                      <i className="fa-solid fa-magnifying-glass"></i>
-                    </span>
-                    <input type="text" placeholder="Search something..." />
-                  </div>
-
-                  <div className="user d-flex align-items-center">
-                    <div className="noti">
-                      <button onClick={handleOpenModal}>
-                        <img src="/images/notification-icon.png" />
-                      </button>
-                    </div>
-                    <div className="text-end">
-                      <h5>Your Name</h5>
-                      <h6>User</h6>
-                    </div>
-                    <div className="user-logo">
-                      <img src="/images/user-logo.png" />
-                    </div>
-                  </div>
-                </div>
-
+                <DashboardHeader />
                 <div className="middle d-flex justify-content-between">
                   <div className="d-flex  justify-content-between">
                     <div className="tkt-status">
                       <h4>Ticket Statuses</h4>
                     </div>
                     <div className="filter-submit-tkt">
-                      {/* <select>
+                      <select>
                         <option selected>Filter</option>
                         <option>Filter1</option>
                         <option>Filter2</option>
                         <option>Filter3</option>
-                      </select> */}
+                      </select>
                       <Link className="dflt-button" href="/submit-ticket">
                         SUBMIT TICKET
                       </Link>
@@ -216,7 +203,7 @@ export default function Dashboard() {
                         <div className="heightt">
                           <div className="top d-flex justify-content-between align-items-center">
                             <h5>Ticket History</h5>
-                            {/* <select>
+                            <select>
                               <option selected>Weekly</option>
                               <option>Weekly</option>
                               <option>Weekly</option>
@@ -461,7 +448,7 @@ export default function Dashboard() {
                     </div>
                     <div className="col-md-4">
                       <div className="circular-chartt">
-                        <div class="top d-flex justify-content-between align-items-center mb-4">
+                        <div class="top d-flex justify-content-between align-items-center">
                           <h5>Ticket Status</h5>
                           <h6>View Details</h6>
                         </div>

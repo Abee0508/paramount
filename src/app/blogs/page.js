@@ -1,11 +1,30 @@
+"use client";
+
 import Head from "next/head";
 
 import Link from "next/link";
 import Image from "next/image";
 import Header from "../components/header";
 import Footer from "../components/Footer";
+import handleContactUs from "../auth/api/contactUsHelper";
+import { useEffect, useState } from "react";
 
 export default function Blogs() {
+  const [formData, setFormData] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleInputChange = (field, value) => {
+    setFormData({
+      ...formData,
+      [field]: value,
+    });
+  };
+
   return (
     <>
       <Head>
@@ -55,7 +74,7 @@ export default function Blogs() {
                   <div className="text">
                     <h5 className="sub-text">Creating an Inspiring Office Workspace to Boost Your Team’s Productivity and Business Growth</h5>
                     <p data-aos="fade-up" className="paragraph">
-                    Ever walked into an <span>office space</span> and immediately felt energized? There's something about a well-thought-out workspace that just clicks, right? Whether it’s the splash of color on the walls or the clever layout that invites creativity, the environment you create for your team can play a huge role in everyday productivity and overall business growth.
+                      Ever walked into an <span>office space</span> and immediately felt energized? There's something about a well-thought-out workspace that just clicks, right? Whether it’s the splash of color on the walls or the clever layout that invites creativity, the environment you create for your team can play a huge role in everyday productivity and overall business growth.
                     </p>
                     <Link href="/blog-detail-one">
                       READ MORE<i className="fa-solid fa-angle-right"></i>
@@ -76,7 +95,7 @@ export default function Blogs() {
                   <div className="text">
                     <h5 className="sub-text">5 Key Questions to Consider When Leasing Commercial Office Space</h5>
                     <p data-aos="fade-up" className="paragraph">
-                    Leasing commercial office space is a crucial step for any business. The decision directly impacts daily operations, employee productivity, and long-term financial stability. A well-chosen space enhances collaboration, impresses clients, and provides room for future growth. On the other hand, a poorly selected space can result in financial burdens, logistical issues, and inefficiencies.
+                      Leasing commercial office space is a crucial step for any business. The decision directly impacts daily operations, employee productivity, and long-term financial stability. A well-chosen space enhances collaboration, impresses clients, and provides room for future growth. On the other hand, a poorly selected space can result in financial burdens, logistical issues, and inefficiencies.
                     </p>
                     <Link href="/blog-detail-two">
                       READ MORE<i className="fa-solid fa-angle-right"></i>
@@ -97,7 +116,7 @@ export default function Blogs() {
                   <div className="text">
                     <h5 className="sub-text">Why Leasing Office Space is Still a Smart Move in a Hybrid/Remote Work Era</h5>
                     <p data-aos="fade-up" className="paragraph">
-                    The rise of hybrid and remote work models has transformed how businesses operate. With more employees working from home, many companies are reconsidering the need for physical office space. While remote work offers flexibility, it also presents challenges related to collaboration, professionalism, and productivity. Despite these shifts, leasing office space in the hybrid work era remains a strategic move for businesses looking to balance flexibility with operational efficiency.
+                      The rise of hybrid and remote work models has transformed how businesses operate. With more employees working from home, many companies are reconsidering the need for physical office space. While remote work offers flexibility, it also presents challenges related to collaboration, professionalism, and productivity. Despite these shifts, leasing office space in the hybrid work era remains a strategic move for businesses looking to balance flexibility with operational efficiency.
                     </p>
                     <Link href="/blog-detail-three">
                       READ MORE<i className="fa-solid fa-angle-right"></i>
@@ -106,74 +125,6 @@ export default function Blogs() {
                 </div>
               </div>
 
-              <div className="col-md-4">
-                <div className="inner" data-aos="zoom-in">
-                  <div className="img">
-                    <img
-                      src="/images/home-sec-five-card-img1.png"
-                      alt="home-sec-five-card-img1"
-                    />
-                  </div>
-
-                  <div className="text">
-                    <h5 className="sub-text">Lorem Ipsum is simply dummy</h5>
-                    <p data-aos="fade-up" className="paragraph">
-                      It is a long established fact that a reader will be
-                      distracted by the readable content of a page when looking
-                      at its layout.
-                    </p>
-                    <Link href="">
-                      READ MORE<i className="fa-solid fa-angle-right"></i>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-4">
-                <div className="inner" data-aos="zoom-in">
-                  <div className="img">
-                    <img
-                      src="/images/home-sec-five-card-img2.png"
-                      alt="home-sec-five-card-img2"
-                    />
-                  </div>
-
-                  <div className="text">
-                    <h5 className="sub-text">Lorem Ipsum is simply dummy</h5>
-                    <p data-aos="fade-up" className="paragraph">
-                      It is a long established fact that a reader will be
-                      distracted by the readable content of a page when looking
-                      at its layout.
-                    </p>
-                    <Link href="">
-                      READ MORE<i className="fa-solid fa-angle-right"></i>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-4">
-                <div className="inner" data-aos="zoom-in">
-                  <div className="img">
-                    <img
-                      src="/images/home-sec-five-card-img3.png"
-                      alt="home-sec-five-card-img3"
-                    />
-                  </div>
-
-                  <div className="text">
-                    <h5 className="sub-text">Lorem Ipsum is simply dummy</h5>
-                    <p data-aos="fade-up" className="paragraph">
-                      It is a long established fact that a reader will be
-                      distracted by the readable content of a page when looking
-                      at its layout.
-                    </p>
-                    <Link href="">
-                      READ MORE<i className="fa-solid fa-angle-right"></i>
-                    </Link>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -199,26 +150,50 @@ export default function Blogs() {
                 <div className="col-md-8">
                   <div className="row">
                     <div className="col-md-6">
-                      <input type="text" placeholder="First Name" />
+                      <input
+                    type="text"
+                    placeholder="First Name *"
+                    value={formData.first_name}
+                    onChange={(e) => handleInputChange("first_name", e.target.value)}
+                  />
                     </div>
 
                     <div className="col-md-6">
-                      <input type="text" placeholder="Last Name" />
+                    <input
+                    type="text"
+                    placeholder="Last Name *"
+                    value={formData.last_name}
+                    onChange={(e) => handleInputChange("last_name", e.target.value)}
+                  />
                     </div>
 
                     <div className="col-md-6">
-                      <input type="text" placeholder="First Name" />
+                    <input
+                    type="email"
+                    placeholder="Email Address *"
+                    value={formData.email}
+                    onChange={(e) => handleInputChange("email", e.target.value)}
+                  />
                     </div>
 
                     <div className="col-md-6">
-                      <input type="text" placeholder="Last Name" />
+                    <input
+                    type="tel"
+                    placeholder="Phone Number *"
+                    value={formData.phone}
+                    onChange={(e) => handleInputChange("phone", e.target.value)}
+                  />
                     </div>
 
                     <div className="col-md-12">
-                      <textarea placeholder="Message"></textarea>
+                    <textarea
+                    placeholder="Message Here..."
+                    value={formData.message}
+                    onChange={(e) => handleInputChange("message", e.target.value)}
+                  ></textarea>
                     </div>
                   </div>
-                  <button>Send Message</button>
+                  <button onClick={() => handleContactUs(formData, setFormData)}>Send Message</button>
                 </div>
               </div>
             </div>
