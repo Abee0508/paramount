@@ -94,10 +94,12 @@ export default function Dashboard() {
                     </li>
 
                     <li>
+                    <Link href="/tickets">
                       <button id="tickets">
                         <img src="/images/profile-icon.png" />
                         My Tickets
                       </button>
+                      </Link>
                     </li>
 
                     <li>
@@ -208,10 +210,10 @@ export default function Dashboard() {
                               <option>Weekly</option>
                               <option>Weekly</option>
                               <option>Weekly</option>
-                            </select> */}
+                            </select>
                           </div>
 
-                          <div className="tablee">
+                          <div className="tablee overflow">
                             <table>
                               <thead>
                                 <tr>
