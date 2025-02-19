@@ -84,7 +84,48 @@ export default function Dashboard() {
                 <div className="top-logo">
                   <img src="/images/dashboard-logo.png" />
                 </div>
-<Sidebar />
+                <div className="dashboard-buttons">
+                  <ul>
+                    <li>
+                      <button className="active" id="dashboard">
+                        <img src="/images/dash-icon.png" />
+                        Dashboard
+                      </button>
+                    </li>
+
+                    <li>
+                      <button id="tickets">
+                        <img src="/images/profile-icon.png" />
+                        My Tickets
+                      </button>
+                    </li>
+
+                    <li>
+                      <Link href="/messages">
+                        <button id="messages">
+                          <img src="/images/msg-icon.png" />
+                          Messages
+                        </button>
+                      </Link>
+                    </li>
+
+                    <li>
+                      <button id="setting">
+                        <img src="/images/setting-icon.png" />
+                        Setting
+                      </button>
+                    </li>
+
+                    <li>
+                      <Link href="/login">
+                        <button id="logout">
+                          <img src="/images/logout-icon.png" />
+                          Log Out
+                        </button>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
                 <div className="faded-logo">
                   <img src="/images/dashboard-faded-logo.png" />
                 </div>
@@ -170,7 +211,7 @@ export default function Dashboard() {
                             </select>
                           </div>
 
-                          <div className="tablee">
+                          <div className="tablee overflow">
                             <table>
                               <thead>
                                 <tr>
