@@ -7,6 +7,9 @@ export function middleware(request) {
   if (!currentUser && request.nextUrl.pathname=='/') {
     return NextResponse.next();
   }
+  if (!currentUser && request.nextUrl.pathname.startsWith('/')) {
+    return NextResponse.next();
+  }
   if (!currentUser && request.nextUrl.pathname.startsWith('/new-register')) {
     return NextResponse.next();
   }
@@ -14,6 +17,12 @@ export function middleware(request) {
     return NextResponse.next();
   }
   if (!currentUser && request.nextUrl.pathname.startsWith('/about-us')) {
+    return NextResponse.next();
+  }
+  if (!currentUser && request.nextUrl.pathname.startsWith('/properties')) {
+    return NextResponse.next();
+  }
+  if (!currentUser && request.nextUrl.pathname.startsWith('/properties')) {
     return NextResponse.next();
   }
   if (!currentUser && !request.nextUrl.pathname.startsWith('/login')) {

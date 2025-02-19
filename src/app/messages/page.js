@@ -46,50 +46,7 @@ export default function Messages() {
                 <div className="top-logo">
                   <img src="/images/dashboard-logo.png" />
                 </div>
-                <div className="dashboard-buttons">
-                  <ul>
-                    <li>
-                      <Link href="/dashboard">
-                        <button className id="dashboard">
-                          <img src="/images/dash-icon.png" />
-                          Dashboard
-                        </button>
-                      </Link>
-                    </li>
-
-                    <li>
-                      <button id="tickets">
-                        <img src="/images/profile-icon.png" />
-                        My Tickets
-                      </button>
-                    </li>
-
-                    <li>
-                      <Link href="/messages">
-                        <button className="active" id="messages">
-                          <img src="/images/msg-icon.png" />
-                          Messages
-                        </button>
-                      </Link>
-                    </li>
-
-                    <li>
-                      <button id="setting">
-                        <img src="/images/setting-icon.png" />
-                        Setting
-                      </button>
-                    </li>
-
-                    <li>
-                      <Link href="/login">
-                        <button id="logout">
-                          <img src="/images/logout-icon.png" />
-                          Log Out
-                        </button>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
+<Sidebar />
                 <div className="faded-logo">
                   <img src="/images/dashboard-faded-logo.png" />
                 </div>

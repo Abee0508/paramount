@@ -84,48 +84,7 @@ export default function Dashboard() {
                 <div className="top-logo">
                   <img src="/images/dashboard-logo.png" />
                 </div>
-                <div className="dashboard-buttons">
-                  <ul>
-                    <li>
-                      <button className="active" id="dashboard">
-                        <img src="/images/dash-icon.png" />
-                        Dashboard
-                      </button>
-                    </li>
-
-                    <li>
-                      <button id="tickets">
-                        <img src="/images/profile-icon.png" />
-                        My Tickets
-                      </button>
-                    </li>
-
-                    <li>
-                      <Link href="/messages">
-                        <button id="messages">
-                          <img src="/images/msg-icon.png" />
-                          Messages
-                        </button>
-                      </Link>
-                    </li>
-
-                    <li>
-                      <button id="setting">
-                        <img src="/images/setting-icon.png" />
-                        Setting
-                      </button>
-                    </li>
-
-                    <li>
-                      <Link href="/login">
-                        <button id="logout">
-                          <img src="/images/logout-icon.png" />
-                          Log Out
-                        </button>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
+<Sidebar />
                 <div className="faded-logo">
                   <img src="/images/dashboard-faded-logo.png" />
                 </div>
@@ -139,8 +98,8 @@ export default function Dashboard() {
                       <h4>Ticket Statuses</h4>
                     </div>
                     <div className="filter-submit-tkt">
-                      <select>
-                        <option selected>Filter</option>
+                      <select defaultValue="filter">
+                        <option>Filter</option>
                         <option>Filter1</option>
                         <option>Filter2</option>
                         <option>Filter3</option>
@@ -203,12 +162,12 @@ export default function Dashboard() {
                         <div className="heightt">
                           <div className="top d-flex justify-content-between align-items-center">
                             <h5>Ticket History</h5>
-                            <select>
-                              <option selected>Weekly</option>
+                            <select defaultValue="weekly">
                               <option>Weekly</option>
                               <option>Weekly</option>
                               <option>Weekly</option>
-                            </select> */}
+                              <option>Weekly</option>
+                            </select>
                           </div>
 
                           <div className="tablee">
@@ -448,7 +407,7 @@ export default function Dashboard() {
                     </div>
                     <div className="col-md-4">
                       <div className="circular-chartt">
-                        <div class="top d-flex justify-content-between align-items-center">
+                        <div className="top d-flex justify-content-between align-items-center">
                           <h5>Ticket Status</h5>
                           <h6>View Details</h6>
                         </div>

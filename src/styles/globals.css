@@ -5,6 +5,7 @@ html {
   height: 100%;
   scroll-behavior: smooth;
 }
+
 body {
   background: #ffffff;
   color: #000;
@@ -34,21 +35,19 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-  background-image: linear-gradient(
-    to bottom,
-    #5e4326,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #5e4326
-  );
+  background-image: linear-gradient(to bottom,
+      #5e4326,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #5e4326);
 }
 
 @font-face {
@@ -166,21 +165,19 @@ section.home-banner .content p {
 }
 
 a.dflt-button {
-  background-image: linear-gradient(
-    to right,
-    #7f5c34,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #7f5c34
-  );
+  background-image: linear-gradient(to right,
+      #7f5c34,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #7f5c34);
   color: #000;
   font-family: "Poppins";
   font-weight: bold;
@@ -195,21 +192,19 @@ a.dflt-button {
 }
 
 button.dflt-button {
-  background-image: linear-gradient(
-    to right,
-    #7f5c34,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #7f5c34
-  );
+  background-image: linear-gradient(to right,
+      #7f5c34,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #7f5c34);
   color: #000;
   font-family: "Poppins";
   font-weight: bold;
@@ -300,21 +295,19 @@ button.dflt-button:hover {
 }
 
 a.dflt-button:hover i {
-  background-image: linear-gradient(
-    to right,
-    #7f5c34,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #7f5c34
-  );
+  background-image: linear-gradient(to right,
+      #7f5c34,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #7f5c34);
 }
 
 .full-width-header header {
@@ -378,21 +371,19 @@ section.home-section-two {
 
 .lease-property h4 {
   margin: 0;
-  background-image: linear-gradient(
-    to right,
-    #7f5c34,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #7f5c34
-  );
+  background-image: linear-gradient(to right,
+      #7f5c34,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #7f5c34);
   color: #000;
   font-family: "Poppins";
   font-weight: 600;
@@ -423,21 +414,19 @@ section.home-section-two {
 }
 
 .for-lease-property button {
-  background-image: linear-gradient(
-    to right,
-    #7f5c34,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #7f5c34
-  );
+  background-image: linear-gradient(to right,
+      #7f5c34,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #7f5c34);
   color: #000;
   font-family: "Poppins";
   width: 100%;
@@ -660,21 +649,19 @@ section.home-section-three .title {
 section.home-section-three .inner a {
   position: absolute;
   right: 0;
-  background-image: linear-gradient(
-    to right,
-    #7f5c34,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #7f5c34
-  );
+  background-image: linear-gradient(to right,
+      #7f5c34,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #7f5c34);
   width: 46px;
   height: 40px;
   border-radius: 20px 0 0px 0px;
@@ -1256,10 +1243,12 @@ section.blogs-banner {
 }
 
 @keyframes moveUpDown {
+
   0%,
   100% {
     transform: translateX(0) translateY(0);
   }
+
   50% {
     transform: translateX(0) translateY(-10px);
   }
@@ -1369,21 +1358,19 @@ section.blog-detail-section-two .title {
 }
 
 .contact-section-two button {
-  background-image: linear-gradient(
-    to right,
-    #7f5c34,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #7f5c34
-  );
+  background-image: linear-gradient(to right,
+      #7f5c34,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #7f5c34);
   color: #000 !important;
   font-weight: 700 !important;
 }
@@ -1455,21 +1442,19 @@ section.property-section-two .main-slide img {
   display: flex !important;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(
-    to right,
-    #7f5c34,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #7f5c34
-  );
+  background-image: linear-gradient(to right,
+      #7f5c34,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #7f5c34);
   width: 30px;
   position: absolute;
   z-index: 9;
@@ -1526,21 +1511,19 @@ section.property-section-two .d-flex .black-bg {
   padding: 12px 16px;
   border-radius: 10px;
   transition: all 0.5s;
-  background-image: linear-gradient(
-    to right,
-    #7f5c34,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #7f5c34
-  );
+  background-image: linear-gradient(to right,
+      #7f5c34,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #7f5c34);
 }
 
 section.property-section-two .d-flex .black-bg h5 {
@@ -1652,21 +1635,19 @@ section.dashboard-main .container-fluid {
 }
 
 .dashboard-buttons ul li button.active {
-  background-image: linear-gradient(
-    90deg,
-    #7f5c34,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #7f5c34
-  );
+  background-image: linear-gradient(90deg,
+      #7f5c34,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #7f5c34);
   color: #000;
   font-weight: 500;
 }
@@ -1875,21 +1856,19 @@ section.dashboard-main .container-fluid {
 }
 
 .ticket-table .top select {
-  background-image: linear-gradient(
-    to right,
-    #7f5c34,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #7f5c34
-  );
+  background-image: linear-gradient(to right,
+      #7f5c34,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #7f5c34);
   border-radius: 8px;
   font-family: "Poppins";
   font-size: 14px;
@@ -2090,12 +2069,10 @@ section.dashboard-main .container-fluid {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: conic-gradient(
-    green 0% 40%,
-    red 40% 53%,
-    beige 53% 70%,
-    transparent 70% 100%
-  );
+  background: conic-gradient(green 0% 40%,
+      red 40% 53%,
+      beige 53% 70%,
+      transparent 70% 100%);
 }
 
 .label {
@@ -2249,6 +2226,7 @@ section.dashboard-main .container-fluid {
   align-items: center;
   gap: 18px 0;
 }
+
 .submit-ticket-main .bottom button {
   width: 100%;
   justify-content: center;
@@ -2278,14 +2256,12 @@ section.login {
 
 .login-left {
   text-align: center;
-  background-image: linear-gradient(
-    to right,
-    #2f2f2f,
-    #353535,
-    #3c3c3c,
-    #424242,
-    #494949
-  );
+  background-image: linear-gradient(to right,
+      #2f2f2f,
+      #353535,
+      #3c3c3c,
+      #424242,
+      #494949);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -2297,21 +2273,19 @@ section.login {
 .login-left h1 {
   font-size: 3rem;
   font-weight: bold;
-  background-image: linear-gradient(
-    90deg,
-    #7f5c34,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #7f5c34
-  );
+  background-image: linear-gradient(90deg,
+      #7f5c34,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #7f5c34);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -2320,21 +2294,19 @@ section.login {
 }
 
 .login-right {
-  background-image: linear-gradient(
-    90deg,
-    #7f5c34,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #7f5c34
-  );
+  background-image: linear-gradient(90deg,
+      #7f5c34,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #7f5c34);
   height: 100%;
   padding: 0 30px;
   display: flex;
@@ -2356,21 +2328,19 @@ section.login .col-md-6 {
 .login-right input {
   width: 100%;
   border: unset;
-  background-image: linear-gradient(
-    to right,
-    #332615,
-    #372b19,
-    #3a301d,
-    #3e3521,
-    #413a26,
-    #413a26,
-    #413a26,
-    #413a26,
-    #3e3521,
-    #3a301d,
-    #372b19,
-    #332615
-  ) !important;
+  background-image: linear-gradient(to right,
+      #332615,
+      #372b19,
+      #3a301d,
+      #3e3521,
+      #413a26,
+      #413a26,
+      #413a26,
+      #413a26,
+      #3e3521,
+      #3a301d,
+      #372b19,
+      #332615) !important;
   height: 52px;
   margin: 0 0 10px;
   border-radius: 12px;
@@ -2399,21 +2369,19 @@ section.login .col-md-6 {
   padding: 0;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(
-    90deg,
-    #7f5c34,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #7f5c34
-  );
+  background-image: linear-gradient(90deg,
+      #7f5c34,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #7f5c34);
   text-align: center;
   font-family: "Poppins";
   font-size: 24px;
@@ -2436,14 +2404,12 @@ section.login .col-md-6 {
 }
 
 .grad-bg {
-  background-image: linear-gradient(
-    to right,
-    #2f2f2f,
-    #353535,
-    #3c3c3c,
-    #424242,
-    #494949
-  );
+  background-image: linear-gradient(to right,
+      #2f2f2f,
+      #353535,
+      #3c3c3c,
+      #424242,
+      #494949);
   border-radius: 12px;
   height: 52px;
   display: flex;
@@ -2456,14 +2422,12 @@ section.login .col-md-6 {
 }
 
 .grad-bg {
-  background-image: linear-gradient(
-    to right,
-    #2f2f2f,
-    #353535,
-    #3c3c3c,
-    #424242,
-    #494949
-  );
+  background-image: linear-gradient(to right,
+      #2f2f2f,
+      #353535,
+      #3c3c3c,
+      #424242,
+      #494949);
   border-radius: 12px;
   height: 52px;
   display: flex;
@@ -2493,21 +2457,19 @@ section.login .col-md-6 {
 }
 
 .login-left a {
-  background-image: linear-gradient(
-    90deg,
-    #7f5c34,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #7f5c34
-  );
+  background-image: linear-gradient(90deg,
+      #7f5c34,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #7f5c34);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2539,21 +2501,19 @@ p.italic {
 }
 
 ul.golden {
-  background-image: linear-gradient(
-    to right,
-    #7f5c34,
-    #947244,
-    #a88955,
-    #bda167,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #d1b97a,
-    #bda167,
-    #a88955,
-    #947244,
-    #7f5c34
-  );
+  background-image: linear-gradient(to right,
+      #7f5c34,
+      #947244,
+      #a88955,
+      #bda167,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #d1b97a,
+      #bda167,
+      #a88955,
+      #947244,
+      #7f5c34);
 }
 
 ul.golden li {
@@ -2946,7 +2906,7 @@ section.blog-detail-section-two p.italic {
 }
 
 .tkt-progress-box .box:focus {
-    background-color: #000;
+  background-color: #000;
 }
 
 section.dashboard-main.tickets-detail .heightt {
@@ -3021,4 +2981,84 @@ section.dashboard-main.tickets-detail .ticket-table {
   left: 5px;
   font-size: 8px;
   top: -10px;
+}
+
+/* .property-feature {
+  position: relative;
+}
+
+.property-feature ul:nth-child(2) {
+  position: absolute;
+  right: 0;
+  top: 76px;
+}
+
+.property-overview p {
+  position: absolute;
+}
+
+.property-overview {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  gap: 20px;
+  color: #fff;
+  padding: 80px 0 0;
+}
+
+.property-overview p br:first-child {
+  display: none;
+}
+
+.property-overview ul li {color: #fff;font-family: "Montserrat";font-weight: 400;font-size: clamp(14px, 4vw, 16px);padding: 0 0 22px;}
+ */
+
+.property-feature {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.property-feature p {
+  font-family: "Montserrat" !important;
+  font-weight: 400 !important;
+  font-size: clamp(13px, 4vw, 16px) !important;
+  ;
+  line-height: clamp(24px, 4vw, 30px) !important;
+  color: #dcdcdc !important;
+}
+
+.property-feature ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 calc(50% - 1.5rem);
+  min-width: 250px;
+}
+
+
+.property-overview ul {
+  margin: 0;
+  padding: 0 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+}
+
+.property-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  gap: 20px;
+  color: #fff;
+}
+
+
+
+.property-overview p {
+  grid-column: 1 / -1; 
+  display: block; 
+  margin-bottom: 16px; 
 }

@@ -7,8 +7,27 @@ import Header from "../components/header";
 import Footer from "../components/Footer";
 import handleContactUs from "../auth/api/contactUsHelper";
 import { useEffect, useState } from "react";
+import axios from "@/utils/axios";
 
-export default function ContactUs() {
+async function getProperties() {
+  try {
+    const response = await axios.get('/properties-show');
+    console.log('API Response:', response); // Log full API response
+
+    if (response?.data && Array.isArray(response.data)) {
+      return response.data; // Return the array if correctly structured
+    } else {
+      console.error('Unexpected response format:', response.data);
+      return []; // Return empty array if structure is unexpected
+    }
+  } catch (error) {
+    console.error('Error fetching property from API:', error);
+    throw error; // Propagate the error to the caller
+  }
+}
+
+
+export default function Properties() {
 
   const [formData, setFormData] = useState({
     first_name: "",
@@ -24,6 +43,24 @@ export default function ContactUs() {
       [field]: value,
     });
   };
+
+  const [properties, setProperties] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // Loading state
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const fetchedProperties = await getProperties();
+        console.log('Fetched Products:', fetchedProperties); // Log fetched products
+        setProperties(Array.isArray(fetchedProperties) ? fetchedProperties : []); // Update state
+      } catch (error) {
+        console.error('Error fetching Properties:', error);
+        setProperties([]); // Handle errors gracefully
+      }
+    }
+    fetchData();
+  }, []);
+
 
   return (
     <>
@@ -64,79 +101,47 @@ export default function ContactUs() {
             </div>
 
             <div className="row">
-              <div className="col-md-6">
-                <div className="inner" data-aos="zoom-in">
-                  <div className="img">
-                    <img
-                      src="/images/home-sec-two-card-img1.png"
-                      alt="home-sec-two-card-img1"
-                    />
-                  </div>
-                  <div className="text">
-                    <h5 className="sub-text">
-                      1st Floor, Ste 103 <br></br>Bushnell Plaza | 138 Bushnell
-                      Plz
-                    </h5>
-                    <p className="paragraph">
-                      247 - 1,037 SF of Office Space Available in Bushnell, FL
-                      33513
-                    </p>
-                    <div className="d-flex">
-                      <div className="black-bg">
-                        <h5 className="sub-text">
-                          <Link href="/property-detail-one">
-                            <span>View in Detail</span>
-                          </Link>
-                        </h5>
+              {properties.length > 0 ? (
+                properties.map((property) => (
+                  <div className="col-md-6" key={property.id}>
+                    <div className="inner" data-aos="zoom-in">
+                      <div className="img">
+                        <img
+                          src="/images/home-sec-two-card-img1.png"
+                          alt="home-sec-two-card-img1"
+                        />
                       </div>
-                      {/* <div>
+                      <div className="text">
+                        <h5 className="sub-text">
+                          {property.name}
+                        </h5>
+                        <p className="paragraph">
+                          {property.address}
+                        </p>
+                        <div className="d-flex">
+                          <div className="black-bg">
+                            <h5 className="sub-text">
+                              <Link href={`/property-details/${property.id}`}>
+                                <span>View in Detail</span>
+                              </Link>
+                            </h5>
+                          </div>
+                          {/* <div>
                         <ul>
                           <li>790 SF | 1-5 Years | $22.78 /SF/YR</li>
 
                           <li>Office | Full Build-Out | Available Property</li>
                         </ul>
                       </div> */}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-6">
-                <div className="inner" data-aos="zoom-in">
-                  <div className="img">
-                    <img
-                      src="/images/home-sec-two-card-img2.png"
-                      alt="home-sec-two-card-img2"
-                    />
-                  </div>
-                  <div className="text">
-                    <h5 className="sub-text">
-                      2nd Floor, Ste 201 <br></br>Bushnell Plaza | 138 Bushnell
-                      Plz
-                    </h5>
-                    <p className="paragraph">
-                      247 - 1,037 SF of Office Space Available in Bushnell, FL
-                      33513
-                    </p>
-                    <div className="d-flex">
-                      <div className="black-bg">
-                        <h5 className="sub-text">
-                          <Link href="/property-detail-two">
-                            <span>View in Detail</span>
-                          </Link>
-                        </h5>
+                        </div>
                       </div>
-                      {/* <div>
-                        <ul>
-                          <li>247 SF | 1-5 Years | $29.16 /SF/YR</li>
-
-                          <li>Office | Full Build-Out | Available Property</li>
-                        </ul>
-                      </div> */}
                     </div>
                   </div>
-                </div>
-              </div>
+
+                ))
+              ) : (
+                <p>No products found in this category.</p>
+              )}
             </div>
           </div>
         </section>
@@ -164,46 +169,46 @@ export default function ContactUs() {
                   <div className="row">
                     <div className="col-md-6">
                       <input
-                    type="text"
-                    placeholder="First Name *"
-                    value={formData.first_name}
-                    onChange={(e) => handleInputChange("first_name", e.target.value)}
-                  />
+                        type="text"
+                        placeholder="First Name *"
+                        value={formData.first_name}
+                        onChange={(e) => handleInputChange("first_name", e.target.value)}
+                      />
                     </div>
 
                     <div className="col-md-6">
-                    <input
-                    type="text"
-                    placeholder="Last Name *"
-                    value={formData.last_name}
-                    onChange={(e) => handleInputChange("last_name", e.target.value)}
-                  />
+                      <input
+                        type="text"
+                        placeholder="Last Name *"
+                        value={formData.last_name}
+                        onChange={(e) => handleInputChange("last_name", e.target.value)}
+                      />
                     </div>
 
                     <div className="col-md-6">
-                    <input
-                    type="email"
-                    placeholder="Email Address *"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange("email", e.target.value)}
-                  />
+                      <input
+                        type="email"
+                        placeholder="Email Address *"
+                        value={formData.email}
+                        onChange={(e) => handleInputChange("email", e.target.value)}
+                      />
                     </div>
 
                     <div className="col-md-6">
-                    <input
-                    type="tel"
-                    placeholder="Phone Number *"
-                    value={formData.phone}
-                    onChange={(e) => handleInputChange("phone", e.target.value)}
-                  />
+                      <input
+                        type="tel"
+                        placeholder="Phone Number *"
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange("phone", e.target.value)}
+                      />
                     </div>
 
                     <div className="col-md-12">
-                    <textarea
-                    placeholder="Message Here..."
-                    value={formData.message}
-                    onChange={(e) => handleInputChange("message", e.target.value)}
-                  ></textarea>
+                      <textarea
+                        placeholder="Message Here..."
+                        value={formData.message}
+                        onChange={(e) => handleInputChange("message", e.target.value)}
+                      ></textarea>
                     </div>
                   </div>
                   <button onClick={() => handleContactUs(formData, setFormData)}>Send Message</button>
